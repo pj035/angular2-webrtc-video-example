@@ -1,0 +1,11 @@
+<button md-button (click)="onClickConnectToRoom()">
+  Connect
+</button>
+<md-grid-list cols="3" rows="3">
+  <md-grid-tile *ngFor="let client of webrtcClients">
+    <!--<span>{{ client.id }}</span>-->
+    <video controls autoplay width="320" height="240">
+      <source [src]="getVideoStreamURL(client.stream)"/>
+    </video>
+  </md-grid-tile>
+</md-grid-list>
