@@ -27,6 +27,7 @@ export class WebRTCChatComponent {
     this.webrtcConnectionService.connectToRoom();
   }
 
+  // DEPRECATED
   public getVideoStreamURL(stream: MediaStream): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(URL.createObjectURL(stream));
   }
